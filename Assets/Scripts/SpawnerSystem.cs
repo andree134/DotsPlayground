@@ -2,6 +2,9 @@ using Unity.Entities;
 using Unity.Transforms;
 using Unity.Burst;
 using Unity.Mathematics;
+using System.Diagnostics;
+using System.Numerics;
+using UnityEngine;
 
 [BurstCompile]
 public partial struct SpawnerSystem : ISystem
@@ -28,7 +31,6 @@ public partial struct SpawnerSystem : ISystem
         if (spawner.ValueRO.hasSpawned)
             return; //exit if yes
 
-
         // If the next spawn time has passed.
         if (spawner.ValueRO.nextSpawnTime < SystemAPI.Time.ElapsedTime)
         {
@@ -46,10 +48,14 @@ public partial struct SpawnerSystem : ISystem
                         //calculate spawn pos for this cube
                         float3 offset = new float3(x * spacing, y * spacing, z * spacing);
                         float3 spawnPos = spawner.ValueRO.spawnPosition + offset;
+                        float3 rotation = spawner.ValueRO.spawnRotation;
 
                         //Instantiate new cube at calculated pos
                         Entity newEntity = state.EntityManager.Instantiate(spawner.ValueRO.cube);
-                        state.EntityManager.SetComponentData(newEntity, LocalTransform.FromPosition(spawnPos));
+                        //state.EntityManager.SetComponentData(newEntity, LocalTransform.FromPosition(spawnPos));
+                        state.EntityManager.SetComponentData(newEntity, LocalTransform.FromPositionRotation(spawnPos, quaternion.Euler(rotation)));
+                        //state.EntityManager.AddComponentData(newEntity, LocalTransform.FromRotation(quaternion.Euler(rotation)));
+                        //state.EntityManager.SetComponentData(newEntity, quaternion.Euler(rotation));
                     }
                 }
             }

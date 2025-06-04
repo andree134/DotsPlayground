@@ -5,6 +5,7 @@ public struct Spawner : IComponentData
 {
     public Entity cube;
     public float3 spawnPosition;
+    public float3 spawnRotation;
     public float nextSpawnTime;
     public float spawnRate;
     public int3 gridSize; //grid size (x,y,z)

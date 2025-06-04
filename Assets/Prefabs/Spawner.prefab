@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 6388092884650477703, guid: b1725e24aa86d2642869701744a333d4, type: 3}
   spawnRate: 2
+  gridSize: {x: 20, y: 20, z: 20}
+  spacing: 10

@@ -7,6 +7,7 @@ class SpawnerAuthoring : MonoBehaviour
 {
     public GameObject cube;
     public float spawnRate;
+    public float3 spawnRotation;
     public Vector3Int gridSize = new Vector3Int(100,100,100); //grid size
     public int spacing = 10; //space between cubes size
 }
@@ -19,6 +20,7 @@ class SpawnerBaker : Baker<SpawnerAuthoring>
         {
             cube = GetEntity(authoring.cube, TransformUsageFlags.Dynamic),
             spawnPosition = authoring.transform.position,
+            spawnRotation = authoring.spawnRotation, 
             nextSpawnTime = 0.0f,
             spawnRate = authoring.spawnRate,
             gridSize = new int3(authoring.gridSize.x, authoring.gridSize.y, authoring.gridSize.z),
