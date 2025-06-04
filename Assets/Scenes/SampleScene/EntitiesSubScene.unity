@@ -168,66 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cube: {fileID: 6388092884650477703, guid: b1725e24aa86d2642869701744a333d4, type: 3}
   spawnRate: 2
---- !u!1001 &614479641043368407
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4463630204848837037, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6388092884650477703, guid: b1725e24aa86d2642869701744a333d4, type: 3}
-      propertyPath: m_Name
-      value: RotatingCube
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b1725e24aa86d2642869701744a333d4, type: 3}
+  gridSize: {x: 100, y: 100, z: 100}
+  spacing: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 614479641043368407}
   - {fileID: 1136773383}
